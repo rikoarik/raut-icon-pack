@@ -1,0 +1,10 @@
+{
+  "name": "@raut-icons/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "List and copy SVGs from the local RAUT icon collection",
+  "type": "module",
+  "bin": { "raut-icons": "./cli.mjs" },
+  "files": ["cli.mjs", "icons/"],
+  "engines": { "node": ">=18" }
+}

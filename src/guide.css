@@ -1,0 +1,46 @@
+.guide { padding-block: clamp(24px, 4vw, 54px) 48px; scroll-margin-top: 65px; }
+.guide-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .85fr); align-items: stretch; gap: clamp(20px, 6vw, 96px); }
+.guide-copy { align-self: center; }
+.guide-copy h1 { font-size: clamp(48px, 6.65vw, 95px); }
+.guide-copy p { max-width: 42ch; margin: 16px 0 17px; color: var(--muted); font-size: 18px; }
+.guide-specimen { display: grid; grid-template-columns: minmax(0, 1fr) minmax(105px, auto) auto; grid-template-rows: 1fr auto; align-items: start; gap: 12px 14px; margin: 0; padding: clamp(17px, 2vw, 27px); background: var(--blue); color: white; --drawing-size: clamp(104px, 15vw, 206px); }
+.guide-specimen figcaption { display: grid; gap: 6px; }
+.guide-specimen figcaption span { font-size: 14px; }
+.guide-specimen figcaption strong { font: 650 clamp(20px, 3.5vw, 42px)/1 var(--display); overflow-wrap: anywhere; }
+.guide-specimen .plate-drawing { align-self: center; }
+.guide-specimen .sizes { flex-direction: column; gap: 7px; padding-left: 12px; border-left: 1px solid #ffffff70; align-self: center; }
+.guide-specimen :is(.sizes, .sizes small) { color: white; }
+.guide-specimen a { display: flex; width: fit-content; align-items: center; gap: 10px; min-height: 44px; grid-column: 1 / -1; margin-top: 4px; font-weight: 650; text-underline-offset: 4px; }
+.guide-specimen a:hover { text-decoration-thickness: 2px; }
+.guide-specimen a:focus-visible { outline-color: white; }
+.guide-workflow { margin: clamp(28px, 4vw, 54px) 0 24px; padding: 0; list-style: none; }
+.guide-workflow li { display: grid; grid-template-columns: clamp(43px, 9vw, 132px) minmax(0, 1fr); padding: clamp(16px, 2vw, 26px) 0; border-top: 1px solid var(--line); }
+.guide-step-number { color: var(--blue); font: clamp(14px, 2vw, 22px)/1.55 var(--mono); }
+.guide-workflow h2 { font-size: clamp(24px, 3.1vw, 40px); margin-bottom: 7px; }
+.guide-workflow p, .guide-next p { font-size: 17px; max-width: 65ch; color: var(--muted); }
+.guide-formats { display: grid; grid-template-columns: 1fr 1fr; max-width: 750px; margin: 14px 0 0; border: 1px solid var(--line); background: var(--white); }
+.guide-formats div { padding: 12px 15px; }
+.guide-formats div + div { border-left: 1px solid var(--line); }
+.guide-formats dt { color: var(--blue); font-weight: 700; }
+.guide-formats dd { margin: 3px 0 0; color: var(--muted); }
+.guide-workflow pre { max-width: 750px; padding: 13px 15px; margin: 12px 0 0; border: 1px solid var(--line); background: var(--white); white-space: pre-wrap; overflow-wrap: anywhere; font: 13px/1.6 var(--mono); }
+.guide-workflow code { font: inherit; }
+.guide-next { padding: 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px; background: var(--active); }
+.guide-next h2 { font-size: 24px; margin-bottom: 3px; }
+.guide-next a { flex: none; }
+@media (max-width: 700px) {
+  .guide-intro { grid-template-columns: 1fr; gap: 21px; }
+  .guide-copy h1 { font-size: clamp(40px, 10vw, 62px); }
+  .guide-copy h1 br { display: none; }
+  .guide-copy p { margin-block: 12px 13px; font-size: 17px; }
+  .guide-specimen { --drawing-size: clamp(103px, 22vw, 158px); }
+  .guide-specimen .sizes { gap: 3px; }
+}
+@media (max-width: 450px) {
+  .guide-specimen { grid-template-columns: minmax(72px, 1fr) auto auto; column-gap: 8px; --drawing-size: clamp(86px, 24vw, 103px); }
+  .guide-specimen figcaption span { font-size: 12px; }
+  .guide-specimen .sizes { padding-left: 8px; }
+  .guide-formats { grid-template-columns: 1fr; }
+  .guide-formats div + div { border-left: 0; border-top: 1px solid var(--line); }
+  .guide-next { align-items: flex-start; flex-direction: column; }
+}

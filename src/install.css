@@ -1,0 +1,50 @@
+.install-page { padding-block: clamp(25px, 4vw, 56px) 48px; scroll-margin-top: 69px; }
+.install-intro { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); align-items: center; gap: clamp(22px, 5vw, 80px); margin-bottom: clamp(26px, 4vw, 52px); scroll-margin-top: 72px; }
+.install-version { margin-bottom: 12px; color: var(--blue); font: 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+.install-intro h1 { font-size: clamp(43px, 6.65vw, 95px); }
+.install-copy h1 + p { margin-top: 16px; color: var(--muted); font-size: 18px; max-width: 51ch; }
+.install-release { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; margin-top: 4px; color: var(--blue); font-weight: 650; text-underline-offset: 4px; }
+.install-nav { background: var(--blue); color: white; padding: 15px clamp(16px, 2vw, 24px) 10px; }
+.install-nav h2 { font-size: clamp(22px, 2.4vw, 32px); padding-bottom: 13px; }
+.install-nav a { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 55px; padding: 8px 4px; border-top: 1px solid #ffffff66; text-decoration: none; }
+.install-nav a:hover { background: #ffffff13; }
+.install-nav a:focus-visible { outline-color: white; outline-offset: -2px; }
+.install-nav a > span { display: grid; gap: 1px; }
+.install-nav a strong { font-size: 16px; font-weight: 700; }
+.install-nav a small { font-size: 14px; color: #edf0ff; }
+.install-nav a svg { rotate: -90deg; }
+.install-content { overflow-wrap: anywhere; }
+.install-content > section { display: grid; grid-template-columns: minmax(0, .36fr) minmax(0, .64fr); gap: clamp(22px, 5vw, 70px); border-top: 1px solid var(--edge); padding-block: clamp(16px, 2.5vw, 32px) clamp(24px, 4vw, 52px); scroll-margin-top: 72px; }
+.install-section-title { align-self: start; display: grid; gap: 10px; }
+.install-section-title span { color: var(--blue); font: 15px var(--mono); }
+.install-section-title h2 { font-size: clamp(27px, 3.3vw, 44px); text-wrap: balance; }
+.install-content section:target .install-section-title { color: var(--blue); }
+.install-section-body { min-width: 0; }
+.install-section-body h3 { margin: 0 0 6px; font-size: 23px; letter-spacing: -.03em; }
+.install-section-body :not(:first-child):is(h3) { border-top: 1px solid var(--line); margin-top: 23px; padding-top: 20px; }
+.install-section-body p { color: var(--muted); max-width: 67ch; }
+.install-section-body > p + p, .install-section-body > .install-snippet + p { margin-top: 14px; }
+.install-section-body p code { font: .85em var(--mono); color: var(--ink); }
+.install-section-body a { color: var(--blue); text-underline-offset: 4px; }
+.install-download { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 4px 10px; margin: 9px 0 6px; border: 1px solid var(--line); background: var(--white); font-weight: 650; text-decoration: none; }
+.install-download:hover { border-color: var(--blue); background: var(--active); }
+.install-snippet { margin: 6px 0 10px; background: var(--white); border: 1px solid var(--line); }
+.install-snippet-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-left: 12px; background: var(--paper); border-bottom: 1px solid var(--line); font-weight: 650; }
+.install-snippet-bar button { display: flex; align-items: center; gap: 6px; justify-content: center; color: var(--blue); padding-inline: 9px; min-width: 85px; min-height: 44px; border-left: 1px solid var(--line); }
+.install-snippet-bar button:hover { background: var(--active); }
+.install-snippet-bar button:focus-visible, .install-snippet pre:focus-visible { outline-offset: -3px; }
+.install-snippet pre { margin: 0; padding: 10px 12px; font: 12px/1.6 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.install-snippet code { font: inherit; }
+.install-feedback:not(:empty) { padding: 0 12px 8px; font-size: 14px; }
+.install-feedback-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.install-feedback-hidden:not(:empty) { padding: 0; }
+.install-back { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; color: var(--blue); font-weight: 650; text-underline-offset: 4px; }
+
+@media (min-width: 901px) { .install-section-title { position: sticky; top: 82px; } }
+@media (max-width: 700px) {
+  .install-intro, .install-content > section { grid-template-columns: minmax(0, 1fr); }
+  .install-copy h1 + p { font-size: 17px; margin-top: 12px; }
+  .install-content > section { gap: 15px; }
+  .install-section-title { display: flex; align-items: baseline; gap: 11px; }
+  .install-section-title h2 { text-wrap: initial; }
+}

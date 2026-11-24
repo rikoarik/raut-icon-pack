@@ -1,0 +1,17 @@
+name: rounded_icons
+description: 612 original rounded line icons for Flutter, generated from the Rounded Icons FigCraft catalog.
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: '>=3.7.0 <4.0.0'
+  flutter: '>=3.29.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  assets:
+    - assets/icons/
